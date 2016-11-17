@@ -1,0 +1,30 @@
+{
+  "name": "staticContent",
+  "version": "0.0.1",
+  "description": "Static content for personal website albertomorales.eu",
+  "bugs": {
+    "url": "https://github.com/alberto-morales/staticContent/issues",
+    "email": "mail@albertomorales.eu"
+  },
+  "license": "LGPL-3.0",
+  "author": "Alberto Morales <mail@albertomorales.eu> - http://albertomorales.eu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alberto-morales/staticContent"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "connect-history-api-fallback": "^1.3.0",
+    "gulp": "^3.9.1",
+    "gulp-if": "^2.0.2",
+    "gulp-jshint": "^2.0.4",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2",
+    "gulp-webserver": "^0.9.1",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1",
+    "nib": "^1.1.2"
+  }
+}

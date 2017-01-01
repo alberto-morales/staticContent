@@ -7,6 +7,8 @@ jshint = require('gulp-jshint'),
 stylish = require('jshint-stylish'),
 webserver = require('gulp-webserver'),
 historyApiFallback = require('connect-history-api-fallback');
+var inject = require('gulp-inject');
+var wiredep = require('wiredep').stream;
 // Servidor web de desarrollo
 gulp.task('server', function() {
   gulp.src('app')
@@ -18,10 +20,10 @@ gulp.task('server', function() {
 });
 // Busca errores en el JS y nos los muestra por pantalla
 gulp.task('jshint', function() {
-return gulp.src('./app/scripts/**/*.js')
-.pipe(jshint('.jshintrc'))
-.pipe(jshint.reporter('jshint-stylish'))
-.pipe(jshint.reporter('fail'));
+		return gulp.src('./app/scripts/**/*.js')
+				.pipe(jshint('.jshintrc'))
+				.pipe(jshint.reporter('jshint-stylish'))
+				.pipe(jshint.reporter('fail'));
 });
 // Preprocesa archivos Stylus a CSS y recarga los cambios
 gulp.task('css', function() {
@@ -35,11 +37,34 @@ gulp.task('html', function() {
 gulp.src('./app/**/*.html')
 .pipe(connect.reload());
 });
+//Busca en las carpetas de estilos y javascript los archivos que hayamos creado
+//para inyectarlos en el index.html
+
+
+gulp.task('inject', function() {
+	var target = gulp.src('index.html', { cwd: './app' });
+	var sources = gulp.src([ './app/scripts/**/*.js', './app/stylesheets/**/*.css' ]);
+	return target.pipe(inject(sources, { relative: true
+									   }))
+				 .pipe(gulp.dest('./app'));
+});
+
+//Inyecta las librerias que instalemos vía Bower
+gulp.task('wiredep', function () {
+	gulp.src('./app/index.html')
+				.pipe(wiredep({ directory: './app/lib'}))
+				.pipe(gulp.dest('./app'));
+});
+
 // Vigila cambios que se produzcan en el código
 // y lanza las tareas relacionadas
 gulp.task('watch', function() {
-gulp.watch(['./app/**/*.html'], ['html']);
-gulp.watch(['./app/stylesheets/**/*.styl'], ['css']);
-gulp.watch(['./app/scripts/**/*.js', './Gulpfile.js'], ['jshint']);
+	gulp.watch(['./app/**/*.html'], ['html']);
+	gulp.watch(['./app/stylesheets/**/*.styl'], ['css']);
+	gulp.watch(['./app/scripts/**/*.js', './Gulpfile.js'], ['jshint', 'inject']);
+	gulp.watch(['./app/stylesheets/**/*.styl'], ['css', 'inject']);
+	gulp.watch(['./bower.json'], ['wiredep']);
 });
-gulp.task('default', ['server', 'watch']);
+
+gulp.task('default', ['server', 'inject', 'wiredep', 'watch']);
+

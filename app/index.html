@@ -7,34 +7,209 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+		<script src="scripts/vendor/modernizr-2.8.3.min.js"></script>		
+
 <!--
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
          Place favicon.ico in the root directory -->
-        
-        <!-- bower:css -->
-        <!-- endbower -->
-		<!-- inject:css -->
-		<link rel="stylesheet" href="stylesheets/main.css">
-		<link rel="stylesheet" href="stylesheets/normalize.css">
-		<!-- endinject -->
-		<script src="scripts/vendor/modernizr-2.8.3.min.js"></script>		
+
+		<link rel="stylesheet" href="stylesheets/normalize.css" type='text/css'>
+
+
+		        
+		<!-- Bootstrap core CSS -->		        
+		<link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type='text/css'>
+				        
+		<!-- Font Awesome CSS -->
+		<link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" type='text/css'>
+		
+		<!-- Fontello CSS -->	
+		<link href="stylesheets/fontello.css" rel="stylesheet" type='text/css'>	
+
+<!-- 		
+        <link href="lib/fullpage.js/dist/jquery.fullpage.css" rel="stylesheet" type='text/css'/>
+ -->
+ 
+		<link href="stylesheets/typography-default.css" rel="stylesheet" type='text/css'>	
+
+		<link href="stylesheets/style.css" rel="stylesheet" type='text/css'>
+		<link href="stylesheets/main.css" rel="stylesheet" type='text/css'>
+			
+
+		<link href="stylesheets/orange.css" rel="stylesheet" type='text/css'>
+			
     </head>
     <body>
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        
-        <!-- bower:js -->
+		<!-- scrollToTop -->
+		<!-- ================ -->
+		<div class="scrollToTop circle"><i class="icon-up-open-big"></i></div>
+		
+        <!-- page wrapper start -->
+		<!-- ================ -->
+		<div class="page-wrapper">
+		
+			<!-- header-container start -->
+			<div class="header-container">
+				<!-- header start -->
+				<!-- ================ --> 
+				<header class="header  clearfix">
+					
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3 col-xs-6 ">
+								<!-- header-left start -->
+								<!-- ================ -->
+								<div class="header-left clearfix">
+
+									<!-- logo -->
+									<div id="logo" class="logo">
+										<a href="index.html" ><img id="logo_img" src="images/logo_img_small.png" alt="Sitio WEB personal de Alberto Morales Morales"></a>
+									</div>
+									<div class="site-slogan" style="color: #bbbbbb;">
+										Sitio WEB personal de Alberto Morales Morales
+									</div>
+								</div>
+								<!-- header-left end -->
+
+							</div>
+							<div class="col-md-9 col-xs-6">
+					
+								<!-- header-right start -->
+								<!-- ================ -->
+								<div class="header-right clearfix">
+									<ul class="social-links circle colored animated-effect-1 text-right">
+										<li class="twitter">
+											<a class="text-white" target="_blank" href="http://www.twitter.com/morales4dev" ><i class="fa fa-twitter"></i></a>
+										</li>
+										<li class="linkedin">
+											<a class="text-white" target="_blank" href="http://www.linkedin.com/in/albertomoralesmorales?locale=es_ES" ><i class="fa fa-linkedin"></i></a>
+										</li>
+									</ul>
+								</div>
+								<!-- header-right end -->
+					
+							</div>
+						</div>
+					</div>
+					
+				</header>
+				<!-- header end -->
+			</div>
+			<!-- header-container end -->
+			
+			<div class="fullpage-site">
+
+				<!-- section start -->
+				<!-- ================ -->
+				<section id="section-1" class="section light-gray-bg" >
+					<div class="container">
+						<div class="row">
+							<div class="col-md-9">
+								<h1 class="title large">Hola, soy <span class="text-default">Alberto Morales</span></h1>
+								<div class="separator-2"></div>
+								<p class="large">Bienvenido a mi sitio WEB personal. Si&eacute;ntete como en tu casa, y si quieres leer mis pensamientos acerca de desarrollo de software y dem&aacute;s... </p>
+								<a href="#secondPage" class="btn btn-default btn-xl">Visita mi blog</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- section end -->
+
+				<!-- section start -->
+				<!-- ================ -->
+				<section id="section-2" class="section dark-translucent-bg" style="background-image: url(/images/alberto-morales-background-img.png);">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-9 text-center col-md-offset-2 pv-20">
+								<h2 class="title">Acerca de mi</h2>
+								<div class="separator mt-10"></div>
+								<p class="text-center">Nac&iacute; en 1971 y ahora vivo en Madrid, Espa&ntilde;a, con mi bella esposa y dos de mis cuatro hijos. Algunos amigos me llaman Tucho, que es simplemente la parte final del apelativo cari&ntilde;oso Albertucho.</p>
+								<div class="space-bottom"></div>
+							</div>
+						</div>
+					</div>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-6 col-md-4 col-lg-offset-1 col-lg-3">
+								<div class="feature-box-2">
+									<span class="default-bg icon small"><i class="fa fa-code"></i></span>
+									<div class="body">
+										<h4 class="title">Trabajo</h4>
+										<p>Artesano del software, apasionado por desarrollar c&oacute;digo de calidad, del que pueda estar orgulloso.</p>
+										<a class="link-light" href="index.html">Leer m&aacute;s<i class="pl-5 fa fa-angle-double-right"></i></a>
+									</div>
+									<div class="space-bottom"></div>
+								</div>
+							</div>						
+							<div class="col-sm-6 col-md-4 col-lg-offset-1 col-lg-3">
+								<div class="feature-box-2">
+									<span class="default-bg icon small">4</span>
+									<div class="body">
+										<h4 class="title">Waterpolo</h4>
+										<p>Mis dos hijos varones juegan con el '4' en la gran familia que es el <a href="http://www.vand03.es/" target="_blank" title="Club Deportivo VAND'03" alt="Club Deportivo VAND'03">CD VAND'03</a>, y desde hace m&aacute;s de 9 a&ntilde;os estamos enganchados a este apasionante deporte. Por eso cuando no estoy trabajando, es f&aacute;cil encontrarme en alguna piscina sigui&eacute;ndolos entre entrenamientos, partidos y torneos. </p>
+										
+									</div>
+									<div class="space-bottom"></div>
+								</div>
+							</div>						
+							<div class="col-sm-6 col-md-4 col-lg-offset-1 col-lg-3">
+								<div class="feature-box-2">
+									<span class="default-bg icon small"><i class="fa fa-plane"></i></span>
+									<div class="body">
+										<h4 class="title">Aeromodelismo</h4>
+										<p>Mi iglesia: el campo de vuelo. <br/>Mi oraci&oacute;n: un avi&oacute;n. <br/>Por eso los domingos voy al <a href="http://rcboadilla.net/" target="_blank" title="Club Aeromodelismo RC Boadilla" alt="Club Aeromodelismo RC Boadilla">templo</a> a elevar plegarias al cielo!</p>
+									</div>
+									<div class="space-bottom"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- section end -->
+
+				<!-- section start -->
+				<!-- ================ -->
+				<section id="section-5" class="section pv-40 stats padding-bottom-clear dark-translucent-bg hovered background-img-5">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8 text-center col-md-offset-2 pv-20">
+								<h2 class="text-center">Contacto</h2>
+								<div class="separator"></div>
+								<p class="lead text-center">Me encantar&iacutea saber de ti. Simplemente d&eacute;jame una l&iacute;nea dici&eacute;ndome en qu&eacute; puedo serte &uacute;til.</p>
+								<ul class="list-inline mb-20 text-center">
+									<li><i class="text-default fa fa-map-marker pr-5"></i>Madrid, Espa&ntilde;a</li>
+									<li><a href="tel: +34 684328672" class="link-dark"><i class="text-default fa fa-phone pl-10 pr-5"></i>+34 684328672</a></li>
+									<li><a href="mailto:mail@albertomorales.eu" class="link-dark"><i class="text-default fa fa-envelope-o pl-10 pr-5"></i>mail@albertomorales.eu</a></li>
+								</ul>
+								<div class="separator"></div>
+								<ul class="social-links circle animated-effect-1 margin-clear text-center space-bottom">
+									<li class="twitter"><a target="_blank" href="http://www.twitter.com/morales4dev" ><i class="fa fa-twitter"></i></a></li>
+									<li class="linkedin"><a target="_blank" href="http://www.linkedin.com/in/albertomoralesmorales?locale=es_ES" ><i class="fa fa-linkedin"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- section end -->
+			</div>			
+			
+		</div>
+		<!-- page-wrapper end -->
+
         <script src="lib/jquery/dist/jquery.js"></script>
         <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
-        <!-- endbower -->
-		<!-- inject:js -->
+        <script src="lib/fullpage.js/dist/jquery.fullpage.js"></script>
+        <script src="lib/jquery-slimscroll/jquery.slimscroll.js"></script>
+        <script src="lib/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+
 		<script src="scripts/main.js"></script>
 		<script src="scripts/plugins.js"></script>
-		<!-- endinject -->
-
+		<script src="scripts/vendor/modernizr-2.8.3.min.js"></script>
+		        
         <script>
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
             ga('create','UA-39672775-1','auto');ga('send','pageview')
